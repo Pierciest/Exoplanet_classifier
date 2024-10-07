@@ -13,7 +13,6 @@ The dataset used for training the models is the **Kepler Objects of Interest (KO
 1. **Support Vector Classifier (SVC)**
    - A classification algorithm effective for high-dimensional spaces and used for both binary and multi-class classification.
    - Achieved an F1 score of approximately 98% on the validation set.
-   - Achieved an F1 score of %99.5 on a different data set with the ensembling model
 
 2. **Random Forest Classifier (RFC)**
    - An ensemble learning method that constructs multiple decision trees during training and outputs the mode of the classes for classification.
@@ -21,6 +20,8 @@ The dataset used for training the models is the **Kepler Objects of Interest (KO
 
 ### Model Fusion
 To improve classification performance and ensure an even distribution of classifications across exoplanets and non-exoplanets, **majority voting** was employed to fuse the two models. The fusion approach combines the predictions of both SVC and RFC, and the final output is the class predicted by the majority of the models.
+   - Achieved an F1 score of %99.5 on a different data set with the ensembling model
+
 
 ### Synthetic Data Generation
 Using the **GaussianCopulaSynthesizer**, new synthetic data was generated based on the patterns observed in the original dataset. The synthetic data aimed to replicate the distributions of key features while avoiding overfitting to the specific instances in the training data. 
